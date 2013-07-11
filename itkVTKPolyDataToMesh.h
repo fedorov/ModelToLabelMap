@@ -84,8 +84,8 @@ class VTKPolyDataToMesh : public Object
 
 }
 
-//#ifndef ITK_MANUAL_INSTANTIATION
-//#include "itkVTKPolyDataToMesh.txx"
-//#endif
+#ifndef ITK_MANUAL_INSTANTIATION
+#include "itkVTKPolyDataToMesh.cxx"
+#endif
 
 #endif

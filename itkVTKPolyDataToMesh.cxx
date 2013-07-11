@@ -16,9 +16,6 @@
  *
  *=========================================================================*/
 
-#ifndef __itkVTKPolyDataToMesh_hxx
-#define __itkVTKPolyDataToMesh_hxx
-
 #include <iostream>
 #include "itkVTKPolyDataToMesh.h"
 
@@ -27,7 +24,7 @@
 #endif
 
 #ifndef vtkFloatingPointType
-# define vtkFloatingPointType vtkFloatingPointType
+//#define vtkFloatingPointType vtkFloatingPointType
 typedef float vtkFloatingPointType;
 #endif
 
@@ -97,7 +94,7 @@ VTKPolyDataToMesh <TMesh>
     {
 
     vtkFloatingPointType * apoint = vtkpoints->GetPoint( p );
-    m_ItkMesh->SetPoint( p, typename TriangleMeshType::PointType( apoint ));
+    //m_ItkMesh->SetPoint( p, typename TriangleMeshType::PointType( apoint ));
 
     // Need to convert the point to PoinType
     typename TriangleMeshType::PointType pt;
@@ -199,5 +196,3 @@ VTKPolyDataToMesh <TMesh>
 }
 
 }
-
-#endif
